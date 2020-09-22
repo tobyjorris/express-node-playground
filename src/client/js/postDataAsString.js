@@ -1,11 +1,15 @@
+
 const postDataAsString = async (url = '', data) => {
     const response = await fetch(url, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'plain/text'
         },
-        body: JSON.stringify(data),
+        body: data,
     })
+
+    console.log('response object:', response);
+
     try {
         return await response.json();
     } catch (e) {

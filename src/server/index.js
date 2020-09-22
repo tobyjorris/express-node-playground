@@ -27,7 +27,9 @@ app.post('/object', function (req, res) {
 })
 
 app.post('/string', function (req, res) {
-    console.log('String req.body', req.body)
+    console.log('server string req', req);
+
+    //console.log('String req.body', req.body)
 
     // const stringText = req.body;
     // res.send(stringText)

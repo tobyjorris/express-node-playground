@@ -1,5 +1,4 @@
 import { validateInput } from "../index";
-import { updateUI } from "../index";
 import { postDataAsObject } from "../index";
 
 function handleStringSubmit(event) {
