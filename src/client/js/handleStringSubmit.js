@@ -1,16 +1,13 @@
 import { validateInput } from "../index";
 import { updateUI } from "../index";
-import { postDataToServer } from "../index";
+import { postDataAsObject } from "../index";
 
-function handleSubmit(event) {
+function handleStringSubmit(event) {
     event.preventDefault()
-    let formText = document.getElementById('analysis-text').value;
+    let formText = document.getElementById('post-string').value;
 
     if (validateInput(formText)) {
-        const serverData = {
-            text: formText
-        }
-        postDataToServer('http://localhost:8081/analyze', serverData)
+        postDataAsObject('http://localhost:8081/string', formText)
             .then(data => {
                 console.log('API data sent back from server:', data)
                 updateUI(data)
@@ -20,4 +17,4 @@ function handleSubmit(event) {
     }
 }
 
-export { handleSubmit }
+export { handleStringSubmit }

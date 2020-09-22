@@ -1,16 +1,18 @@
-import { validateInput } from './js/inputValidator'
-import { handleSubmit } from './js/formHandler'
+import { validateInput } from './js/inputValidator';
+import { handleObjectSubmit } from './js/handleObjectSubmit';
+import { handleStringSubmit } from "./js/handleStringSubmit";
 import { updateUI } from "./js/uiUpdate";
-import { postDataToServer } from "./js/postToServer";
+import { postDataAsObject } from "./js/postDataAsObject";
+import { postDataAsString } from "./js/postDataAsString";
 
 import './styles/base.scss'
-import './styles/footer.scss'
 import './styles/form.scss'
-import './styles/header.scss'
 
 export {
-    postDataToServer,
+    postDataAsObject,
     updateUI,
     validateInput,
-    handleSubmit,
+    handleObjectSubmit,
+    postDataAsString,
+    handleStringSubmit
 }

@@ -1,4 +1,4 @@
-const postDataToServer = async (url = '', data = {}) => {
+const postDataAsString = async (url = '', data) => {
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -13,4 +13,4 @@ const postDataToServer = async (url = '', data = {}) => {
     }
 }
 
-export { postDataToServer }
+export { postDataAsString }

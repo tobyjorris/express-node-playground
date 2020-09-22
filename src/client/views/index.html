@@ -6,41 +6,28 @@
     </head>
 
     <body>
-
-        <header>
-            <div class="logo">
-                <img src="http://localhost:3010/src/client/assets/1_8XIjunF2z6dmsVlkEuOUaw.png" alt="sentiment photo">
-            </div>
-            <div class="nav_section">
-                <button class="nav_button">Navigate</button>
-                <button class="nav_button">Navigate</button>
-            </div>
-        </header>
-
         <main>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <label for="analysis-text">Text for Sentiment Analysis:</label>
-                    <input id="analysis-text" type="text" name="input" value="" placeholder="Input Text Here">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleObjectSubmit(event)">
+                    <label for="post-object">POST - sent as an Object</label>
+                    <input id="post-object" type="text" name="input" value="" placeholder="Input Text Here">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleObjectSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             </section>
-
             <section>
-                <h1>Analysis Results:</h1>
-                <div id="results"></div>
+                <form class="" onsubmit="return Client.handleStringSubmit(event)">
+                    <label for="post-string">POST - sent as a String</label>
+                    <input id="post-string" type="text" name="input" value="" placeholder="Input Text Here">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleStringSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
             </section>
         </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-        <script>
+        <!--<script>
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
                     navigator.serviceWorker.register('./service-worker.js');
                 });
             }
-        </script>
+        </script>-->
     </body>
 </html>
