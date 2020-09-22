@@ -12,8 +12,7 @@ function handleObjectSubmit(event) {
         }
         postDataAsObject('http://localhost:8081/object', serverData)
             .then(data => {
-                console.log('API data sent back from server:', data)
-                updateUI(data)
+                console.log('Object data sent back from server:', data)
             });
     } else {
         alert('invalid input!')

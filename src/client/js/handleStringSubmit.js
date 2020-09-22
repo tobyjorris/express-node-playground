@@ -9,8 +9,7 @@ function handleStringSubmit(event) {
     if (validateInput(formText)) {
         postDataAsObject('http://localhost:8081/string', formText)
             .then(data => {
-                console.log('API data sent back from server:', data)
-                updateUI(data)
+                console.log('String data sent back from server:', data)
             });
     } else {
         alert('invalid input!')

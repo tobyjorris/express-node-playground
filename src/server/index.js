@@ -20,11 +20,17 @@ app.listen(8081, function () {
 })
 
 app.post('/object', function (req, res) {
-    console.log(req)
+    console.log('Object req.body', req.body)
+
+    // const objectText = req.body;
+    // res.send(objectText)
 })
 
 app.post('/string', function (req, res) {
-    console.log(req)
+    console.log('String req.body', req.body)
+
+    // const stringText = req.body;
+    // res.send(stringText)
 })
 
 
